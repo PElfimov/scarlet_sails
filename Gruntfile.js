@@ -16,9 +16,11 @@ module.exports = function(grunt) {
       style: {
         options: {
           processors: [
-            require("autoprefixer")({browsers: [
-              "last 2 versions"
-            ]}),
+            require("autoprefixer")({
+              browsers: [
+                "last 2 versions"
+              ]
+            }),
             require("css-mqpacker")({
               sort: true
             })
@@ -119,9 +121,33 @@ module.exports = function(grunt) {
 
     clean: {
       build: ["build"]
-    }
+    },
+
+    svgstore: {
+      options: {
+        svg: {
+          style: "display: none"
+        }
+      },
+      symbols: {
+        files: {
+          "img/symbols.svg": ["build/img/icons/*.svg"]
+        }
+      }
+    },
+
+      svgmin: {
+        symbols: {
+          files: [{
+            expand: true,
+            src: ["build/img/icons/*.svg"]
+          }]
+        }
+      }
+
   });
 
+  grunt.registerTask("symbols", ["svgmin", "svgstore"]);
   grunt.registerTask("serve", ["browserSync", "watch"]);
   grunt.registerTask("build", [
     "clean",
