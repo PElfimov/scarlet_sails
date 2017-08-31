@@ -1,17 +1,40 @@
-.header-contact{
+.header-contact {
   margin-left: auto;
-
+  margin-right: 69px;
+  margin-top: 29px;
 }
 
-.header-contact__text{
+.header-contact__text {
   .visuali-hidden;
 }
 
-.header-contact__phonenomber{
+.header-contact__phonenomber a{
   text-decoration: none;
   color: @bg-white;
   font-size: 27px;
   font-family: "Tahoma";
   font-weight: 700;
+}
+
+.header-contact__phonenomber {
+  padding-left: 38px;
+  margin-bottom: 6px;
+  position: relative;
+}
+
+.header-contact__phonenomber::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-62%);
+  background-image: url("../img/icons/phonecall.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  background-color:@bg-white ;
+  width: 25px;
+  height: 25px;
+  border-radius: 50% 50%;
 
 }

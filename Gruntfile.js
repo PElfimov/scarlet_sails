@@ -131,7 +131,7 @@ module.exports = function(grunt) {
       },
       symbols: {
         files: {
-          "img/symbols.svg": ["build/img/icons/*.svg"]
+          "img/symbols.svg": ["img/icon/*.svg"]
         }
       }
     },
@@ -140,7 +140,7 @@ module.exports = function(grunt) {
         symbols: {
           files: [{
             expand: true,
-            src: ["build/img/icons/*.svg"]
+            src: ["img/icon/*.svg"]
           }]
         }
       }
