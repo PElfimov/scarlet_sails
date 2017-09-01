@@ -1,0 +1,38 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 216px;
+  min-height: 35px;
+  background: linear-gradient(to bottom, #FF0000 , #FF9696);
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Tahoma";
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0 10px;
+
+  &:hover {
+    background: linear-gradient(to top, #FF0000, #FF0000);
+  }
+
+  &:active {
+    background: none;
+    background-color: lighten(#FF0000, 30%);
+  }
+}
+
+.btn--transparent {
+  border: solid #FFFFFF 2px;
+  background: none;
+  width: 250px;
+}
+
+.btn--party {
+  margin: 27px auto 0;
+  width: 261px;
+  height: 41px;
+  font-size: 20px;
+}
