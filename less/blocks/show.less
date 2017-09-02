@@ -1,0 +1,76 @@
+.show {}
+
+.show__inner {
+  .container;
+}
+
+.show__tittle {
+  display: block;
+  margin: 65px auto 0;
+  font-family: 'PFPlayskoolPro-3D';
+  text-decoration: none;
+  font-size: 70px;
+  line-height: 75px;
+  color: @bg-dark-blue-text;
+  text-transform: uppercase;
+  text-align: center;
+  width: 650px;
+}
+
+.show__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 80px;
+  margin-top: 70px;
+}
+
+.show__item {
+  list-style: none;
+  position: relative;
+  width: 373px;
+  height: 248px;
+  margin-bottom: 48px;
+  background-color: @bg-blue;
+}
+
+.show__item::after{
+  content: "";
+  position: absolute;
+  width: 373px;
+  height: 248px;
+  background: rgba(24, 109, 156, 0.42);
+  top:0;
+  left: 0;
+  z-index: 2;
+
+}
+
+.show__item-text {
+  position: absolute;
+  font-family: "Tahoma";
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  bottom: 35px;
+  left: 30px;
+  color: @bg-white;
+  z-index: 3;
+  width: 150px;
+
+}
+
+.show__item-btn {
+  position: absolute;
+  bottom: 24px;
+  right: 33px;
+  z-index: 3;
+}
+
+.show__inem-btn2 {
+  position: absolute;
+  z-index: 3;
+  bottom: 25px;
+  left: 29px;
+}

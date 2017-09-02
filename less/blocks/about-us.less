@@ -21,6 +21,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0 80px;
+  width: auto;
+  margin-top: 7px;
 }
 
 .about-us__number {
@@ -32,7 +35,8 @@
 
 .about-us__item {
   list-style: none;
-  padding-top: 70px;
+  padding-top: 50px;
+  margin-bottom: 20px;
   width: 250px;
   height: 55px;
   font-family: "Tahoma";
@@ -57,33 +61,43 @@
     transform: translateX(-50%);
   }
 
-  &--more-party::after{
+  &--more-party::after {
     background-image: url("../img/icons/headr.svg");
   }
-  &--40-hero::after{
+
+  &--40-hero::after {
     background-image: url("../img/icons/diamond.svg");
   }
-  &--for-children::after{
+
+  &--for-children::after {
     background-image: url("../img/icons/children.svg");
-  }
-  &--individual-program::after{
-    background-image: url("../img/icons/thinking.svg");
-    transform: scale(-1, 1);
-  }
-  &--experienced-leading::after{
-    background-image: url("../img/icons/conversations.svg");
-  }
-  &--all-safe::after{
-    background-image: url("../img/icons/diploma.svg");
-  }
-  &--punctual::after{
-    background-image: url("../img/icons/time.svg");
-  }
-  &--postpay::after{
-    background-image: url("../img/icons/mony.svg");
-  }
-  &--officially::after{
-    background-image: url("../img/icons/records.svg");
+    background-size: 57px;
   }
 
+  &--individual-program::after {
+    background-image: url("../img/icons/thinking.svg");
+    transform: scale(-1.1,1) translateX(50%);
+    background-size: 42px;
+    height: 60px;
+  }
+
+  &--experienced-leading::after {
+    background-image: url("../img/icons/conversations.svg");
+  }
+
+  &--all-safe::after {
+    background-image: url("../img/icons/diploma.svg");
+  }
+
+  &--punctual::after {
+    background-image: url("../img/icons/time.svg");
+  }
+
+  &--postpay::after {
+    background-image: url("../img/icons/mony.svg");
+  }
+
+  &--officially::after {
+    background-image: url("../img/icons/records.svg");
+  }
 }

@@ -1,0 +1,43 @@
+.btn-show {
+  border: solid 2px #FFFFFF;
+  width: 81px;
+  height: 14px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  font-style: "Arial";
+  color: #FFFFFF;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 8px;
+  border-radius: 6px;
+  background: linear-gradient(to right bottom, #196994 70% , transparent);
+  padding-left: 5px;
+  position: relative;
+  border-bottom: 0;
+}
+
+.btn-show::after {
+  content: "";
+  height: 21px;
+  width: 89px;
+  position: absolute;
+  background-image: url("../img/icons/cursor.svg");
+  background-repeat: no-repeat;
+  background-size: 89px;
+  bottom: -14px;
+  right: -2px;
+}
+
+.btn-show:hover{
+  background: none;
+  background-color:  lighten(#196994, 10%);
+
+}
+
+.btn-show:active{
+  background: none;
+  background-color:  lighten(#196994, 20%);
+
+}
