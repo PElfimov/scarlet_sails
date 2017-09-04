@@ -33,24 +33,35 @@
   text-align: center;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  position: relative;
+
+  &--hit::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-image: url("../img/icons/hit.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80px;
+    top: -40px;
+    left: -25px;
+
+  }
 }
 
-.offers__item-wrapper{
-  padding: 5px;
-  padding-top: 0;
+.offers__item-wrapper {
+  padding: 0 5px 5px;
 }
 
-.offers__item-list li{
+.offers__item-list li {
   margin: 0;
   padding: 0;
   font-size: 16px;
   line-height: 19px;
   text-align: left;
   list-style-type: disc;
-
 }
-
-
 
 .offers__item-title {
   background-color: @bg-dark-blue;
@@ -64,7 +75,7 @@
   border-top-right-radius: 20px;
   padding: 15px;
   display: flex;
-  align-content:center;
+  align-content: center;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
@@ -74,18 +85,16 @@
   font-family: 'PFPlayskoolPro-3D';
   font-size: 35px;
   line-height: 30px;
-
-
-}
-.offers__item-text{
-    position: relative;
-    font-size: 16px;
-    line-height: 19px;
-    margin: 19px 0;
-
 }
 
-.offers__item-text::after{
+.offers__item-text {
+  position: relative;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 19px 0;
+}
+
+.offers__item-text::after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -99,10 +108,10 @@
   background-size: 50px;
 }
 
-.offers__item-text--list-title{
+.offers__item-text--list-title {
   margin-bottom: 0;
 
-  &::after{
+  &::after {
     display: none;
   }
 }
@@ -111,11 +120,11 @@
   display: none;
 }
 
-.offers__item-list{
+.offers__item-list {
   padding-left: 70px;
 }
 
-.offers__price-old{
+.offers__price-old {
   margin-bottom: 10px;
   font-family: "Tahoma";
   font-size: 16px;
@@ -123,7 +132,7 @@
   font-weight: 700;
   position: relative;
 
-  &::after{
+  &::after {
     content: "";
     position: absolute;
     top: 15px;
@@ -134,7 +143,7 @@
     transform: rotate(7deg) translate(-50%,-50%);
   }
 
-  &::before{
+  &::before {
     content: "";
     position: absolute;
     top: 3px;
@@ -146,16 +155,16 @@
   }
 }
 
-.offers__price-text{
+.offers__price-text {
   margin: 0;
   font-family: "PFPlayskoolPro-3D";
   font-size: 36px;
   line-height: 37px;
   color: @bg-dark-red;
-  text-shadow: #FFFFFF 2px 0px 4px, #FFFFFF 0px 2px 4px, #FFFFFF 0px -2px 4px, #FFFFFF -2px 0px 4px;
+  text-shadow: #FFFFFF 2px 0 4px, #FFFFFF 0 2px 4px, #FFFFFF 0 -2px 4px, #FFFFFF -2px 0 4px;
 }
 
-.offers__price{
+.offers__price {
   margin: 0;
   font-family: "PFPlayskoolPro-3D";
   font-size: 61px;
@@ -163,14 +172,10 @@
   color: @bg-dark-red;
 }
 
-.offers__price-benefit{
+.offers__price-benefit {
   margin: 0;
 }
 
-
-
-
-
-.offers__text-hidden{
+.offers__text-hidden {
   .visuali-hidden;
 }
