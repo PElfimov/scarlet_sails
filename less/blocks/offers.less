@@ -21,8 +21,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 0 25px;
-  margin-top: 52px;
+  margin-top: 56px;
 }
 
 .offers__item {
@@ -33,6 +34,23 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+
+.offers__item-wrapper{
+  padding: 5px;
+  padding-top: 0;
+}
+
+.offers__item-list li{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: left;
+  list-style-type: disc;
+
+}
+
+
 
 .offers__item-title {
   background-color: @bg-dark-blue;
@@ -58,4 +76,101 @@
   line-height: 30px;
 
 
+}
+.offers__item-text{
+    position: relative;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 19px 0;
+
+}
+
+.offers__item-text::after{
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 50px;
+  height: 20px;
+  background-image: url("../img/icons/elipse.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px;
+}
+
+.offers__item-text--list-title{
+  margin-bottom: 0;
+
+  &::after{
+    display: none;
+  }
+}
+
+.offers__item-text--without-elips::after {
+  display: none;
+}
+
+.offers__item-list{
+  padding-left: 70px;
+}
+
+.offers__price-old{
+  margin-bottom: 10px;
+  font-family: "Tahoma";
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  position: relative;
+
+  &::after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    width: 127px;
+    height: 1px;
+    background-color: red;
+    transform: rotate(7deg) translate(-50%,-50%);
+  }
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    width: 127px;
+    height: 1px;
+    background-color: red;
+    transform: rotate(-7deg) translate(-50%,-50%);
+  }
+}
+
+.offers__price-text{
+  margin: 0;
+  font-family: "PFPlayskoolPro-3D";
+  font-size: 36px;
+  line-height: 37px;
+  color: @bg-dark-red;
+  text-shadow: #FFFFFF 2px 0px 4px, #FFFFFF 0px 2px 4px, #FFFFFF 0px -2px 4px, #FFFFFF -2px 0px 4px;
+}
+
+.offers__price{
+  margin: 0;
+  font-family: "PFPlayskoolPro-3D";
+  font-size: 61px;
+  line-height: 46px;
+  color: @bg-dark-red;
+}
+
+.offers__price-benefit{
+  margin: 0;
+}
+
+
+
+
+
+.offers__text-hidden{
+  .visuali-hidden;
 }
