@@ -150,7 +150,7 @@
             </div>
             <a href="#" class="btn btn--show show__item-btn show__item-btn">Заказать</a>
             <div class="show__inem-btn2">
-              <a href="#" class="btn-show">Подробнее</a>
+              <a href="krio.html" class="btn-show">Подробнее</a>
             </div>
           </li>
           <li class="show__item">
@@ -160,7 +160,7 @@
             </div>
             <a href="#" class="btn btn--show show__item-btn">Заказать</a>
             <div class="show__inem-btn2">
-              <a href="#" class="btn-show">Подробнее</a>
+              <a href="santaclaus.html" class="btn-show">Подробнее</a>
             </div>
           </li>
           <li class="show__item">
@@ -170,7 +170,7 @@
             </div>
             <a href="#" class="btn btn--show show__item-btn">Заказать</a>
             <div class="show__inem-btn2">
-              <a href="#" class="btn-show">Подробнее</a>
+              <a href="sweettooth.html" class="btn-show">Подробнее</a>
             </div>
           </li>
           <li class="show__item">
@@ -180,7 +180,7 @@
             </div>
             <a href="#" class="btn btn--show show__item-btn">Заказать</a>
             <div class="show__inem-btn2">
-              <a href="#" class="btn-show">Подробнее</a>
+              <a href="foamrubber.html" class="btn-show">Подробнее</a>
             </div>
           </li>
           <li class="show__item">
@@ -190,7 +190,7 @@
             </div>
             <a href="#" class="btn btn--show show__item-btn">Заказать</a>
             <div class="show__inem-btn2">
-              <a href="#" class="btn-show">Подробнее</a>
+              <a href="mastersnature.html" class="btn-show">Подробнее</a>
             </div>
           </li>
           <li class="show__item">
@@ -200,7 +200,7 @@
             </div>
             <a href="#" class="btn btn--show show__item-btn">Заказать</a>
             <div class="show__inem-btn2">
-              <a href="#" class="btn-show">Подробнее</a>
+              <a href="bubble.html" class="btn-show">Подробнее</a>
             </div>
           </li>
           <li class="show__item">
@@ -210,7 +210,7 @@
             </div>
             <a href="#" class="btn btn--show show__item-btn">Заказать</a>
             <div class="show__inem-btn2">
-              <a href="#" class="btn-show">Подробнее</a>
+              <a href="icecream.html" class="btn-show">Подробнее</a>
             </div>
           </li>
           <li class="show__item">
@@ -220,7 +220,7 @@
             </div>
             <a href="#" class="btn btn--show show__item-btn">Заказать</a>
             <div class="show__inem-btn2">
-              <a href="#" class="btn-show">Подробнее</a>
+              <a href="fiksi.html" class="btn-show">Подробнее</a>
             </div>
           </li>
           <li class="show__item">
@@ -230,7 +230,7 @@
             </div>
             <a href="#" class="btn btn--show show__item-btn">Заказать</a>
             <div class="show__inem-btn2">
-              <a href="#" class="btn-show">Подробнее</a>
+              <a href="kvest.html" class="btn-show">Подробнее</a>
             </div>
           </li>
           <li class="show__item">
@@ -240,7 +240,7 @@
             </div>
             <a href="#" class="btn btn--show show__item-btn">Заказать</a>
             <div class="show__inem-btn2">
-              <a href="#" class="btn-show">Подробнее</a>
+              <a href="animation.html" class="btn-show">Подробнее</a>
             </div>
           </li>
         </ul>
@@ -400,11 +400,39 @@
       <div class="main-footer__copyright">Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a> is licensed by CC BY 3.0</div>
     </div>
   </footer>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <div class="modal-content modal-content--order">
+      <button class="modal-content__btn-close btn-close" type="button" title="Закрыть">Закрыть</button>
+      <h2 class="modal-content__title">Заказать</h2>
+      <p class="modal-content__text">Для заказа шоу-программы заполните форму заказа</p>
+      <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
+        <input class="order-form__input" type="text" name="user" placeholder="Ваше имя">
+        <input class="order-form__input" type="tel"  name="phone" placeholder="Ваш телефон">
+        <label class="order-form__checkbox">
+          <input type="checkbox" name="personal-data">
+          Я соглашаюсь на передачу персональных данных согласно пользовательскому соглашению и политике конфиденциальности данного сайта
+        </label>
+        <button class="btn order-form__btn" type="submit">Заказать</button>
+      </form>
+    </div>
+    <div class="modal-content modal-content--consultation">
+        <button class="modal-content__btn-close btn-close" type="button" title="Закрыть">Закрыть</button>
+        <h2 class="modal-content__title">Заказать консультацию</h2>
+        <p class="modal-content__text">Оставьте заявку и мы свяжемся с вами в ближайшее время, чтобы ответить на ваши вопросы</p>
+        <form class="order-form order-form--consultation" action="https://echo.htmlacademy.ru" method="post">
+          <input class="order-form__input" type="text" name="user" placeholder="Ваше имя">
+          <input class="order-form__input" type="tel"  name="phone" placeholder="Ваш телефон">
+          <label class="order-form__checkbox">
+            <input type="checkbox" name="personal-data">
+            Я соглашаюсь на передачу персональных данных согласно пользовательскому соглашению и политике конфиденциальности данного сайта
+          </label>
+          <button class="btn order-form__btn" type="submit">Заказать</button>
+        </form>
+      </div>
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
   <!-- подключаем jquery -->
-  <script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
+  <!-- <script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script> -->
   <!--  подключаем плагин -->
-  <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+  <!-- <script type="text/javascript" charset="utf-8" src="js/index.js"></script> -->
   <!-- добавляем id видеофайла с youtube -->
 </body>
 
