@@ -26,18 +26,18 @@
         <div class="social-btn">
           <p class="social-btn__text-hidden">Пишите нам</p>
           <ul class="social-btn__list">
-            <li class="social-btn__item social-btn__item--ok">
-              <a href="#">Мы в одноклассниках</a>
+            <!-- <li class="social-btn__item social-btn__item--ok">
+              <a href="#" target="_blank">Мы в одноклассниках</a>
             </li>
             <li class="social-btn__item social-btn__item--vk">
-              <a href="#">Мы в контакте</a>
-            </li>
+              <a href="#" target="_blank">Мы в контакте</a>
+            </li> -->
             <li class="social-btn__item social-btn__item--insta">
-              <a href="#">Мы в инстаграмм</a>
+              <a href="https://www.instagram.com/prazdnik.barnaul/" target="_blank"> Мы в инстаграмм</a>
             </li>
-            <li class="social-btn__item social-btn__item--fb">
-              <a href="#">Мы в фейсбук</a>
-            </li>
+            <!-- <li class="social-btn__item social-btn__item--fb">
+              <a href="#" target="_blank">Мы в фейсбук</a>
+            </li> -->
           </ul>
         </div>
       </section>
@@ -46,32 +46,32 @@
       <p class="main-nav__text-hidden">Главное меню сайта</p>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a href="#">Главная</a>
+          <a href="#main-page">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a href="#">Наши шоу</a>
+          <a href="#show">Наши шоу</a>
         </li>
         <li class="main-nav__item">
-          <a href="#">Отзывы</a>
+          <a href="#reviews">Отзывы</a>
         </li>
         <li class="main-nav__item">
-          <a href="#">Спецпредложения</a>
+          <a href="#offers">Спецпредложения</a>
         </li>
         <li class="main-nav__item">
-          <a href="#">Сертификаты</a>
+          <a href="#сertificates">Сертификаты</a>
         </li>
       </ul>
     </nav>
 
   </header>
   <main>
-    <section class="capture-page">
+    <section id="main-page" class="capture-page">
       <div id="wrapper" class="capture-page__inner">
         <h2 class="capture-page__tittle">Организация праздников для детей</h2>
         <p class="capture-page__text">яркие шоу-программы, кветы, мастер-классы и аниматоры
         </p>
         <div class="capture-page__btn">
-          <a class="btn" href="#">Узнать подробнее</a>
+          <a class="btn" href="#show">Узнать подробнее</a>
           <a class="btn btn--transparent" href="#">Заказать консультацию</a>
         </div>
       </div>
@@ -79,7 +79,7 @@
 
       </div>
     </section>
-    <section class="why-us-page">
+    <section  class="why-us-page">
       <div class="why-us-page__inner">
         <h2 class="why-us-page__tittle">Почему нас выбирают наши клиенты?</h2>
         <ul class="why-us-page__list">
@@ -139,7 +139,7 @@
         </ul>
       </div>
     </section>
-    <section class="show">
+    <section id="show" class="show">
       <div class="show__inner">
         <h2 class="show__tittle">Наши шоу</h2>
         <ul class="show__list">
@@ -246,7 +246,7 @@
         </ul>
       </div>
     </section>
-    <section class="video-reviews">
+    <section id="reviews" class="video-reviews">
       <h2 class="video-reviews__title">Отзывы</h2>
       <div class="video-reviews__inner">
         <button class="btn-reviews btn-reviews--left" type="button"></button>
@@ -268,9 +268,9 @@
       </div>
       <a href="#" class="btn btn--video-reviews video-reviews__btn">Хочу также</a>
     </section>
-    <section class="offers">
+    <section  class="offers">
       <div class="offers__inner">
-        <h2 class="offers__title">Спецпредложения</h2>
+        <h2 id="offers" class="offers__title">Спецпредложения</h2>
         <ul class="offers__list">
           <li class="offers__item">
             <h3 class="offers__item-title">Пакет</br><span>«Зажигай»</span></h3>
@@ -334,7 +334,7 @@
         <h2 class="our-partners__title">Наши партнеры</h2>
       </div>
     </section>
-    <section class="сertificates">
+    <section id="сertificates" class="сertificates">
       <h2 class="сertificates__title">Сертификаты</h2>
       <div class="сertificates__inner">
         <button class="btn-reviews btn-reviews--blue-left" type="button"></button>
@@ -351,59 +351,60 @@
   </main>
 
   <footer class="main-footer">
-    <div class="main-footer__inner">
-      <section class="footer-contact">
-        <a class="footer-contact__link"><img src="img/logo.png" width="274" height="77" alt="Логотип компании «Алые Паруса»"></a>
-        <p class="footer-contact__text">«Алые паруса»</br> г. Барнаул, ул. Гридасова, 17 а</p>
-        <a class="footer-contact__phonenomber" href="tel:+79293992429">+7 929 399 24 29</a>
+    <div class="main-footer__wrapper">
+      <div class="main-footer__inner">
+        <section class="footer-contact">
+          <a href="#main-page" class="footer-contact__link"><img src="img/logo.png" width="274" height="77" alt="Логотип компании «Алые Паруса»"></a>
+          <p class="footer-contact__text">«Алые паруса»</br> г. Барнаул, ул. Гридасова, 17 а</p>
+          <a class="footer-contact__phonenomber" href="tel:+79293992429">+7 929 399 24 29</a>
 
-      </section>
-      <nav class="footer-nav">
-        <p class="footer-nav__text-hidden">Главное меню сайта</p>
-        <ul class="footer-nav__list">
-          <li class="footer-nav__item">
-            <a href="#">Главная</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="#">Наши шоу</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="#">Отзывы</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="#">Спец предложения</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="#">Сертификаты</a>
-          </li>
-        </ul>
-        <section class="social-btn social-btn--footer">
-          <p class="social-btn__text-hidden">Пишите нам</p>
-          <ul class="social-btn__list">
-            <li class="social-btn__item social-btn__item--ok">
-              <a href="#">Мы в одноклассниках</a>
+        </section>
+        <nav class="footer-nav">
+          <p class="footer-nav__hidden">Главное меню сайта</p>
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a href="#main-page">Главная</a>
             </li>
-            <li class="social-btn__item social-btn__item--vk">
-              <a href="#">Мы в контакте</a>
+            <li class="footer-nav__item">
+              <a href="#show">Наши шоу</a>
             </li>
-            <li class="social-btn__item social-btn__item--insta">
-              <a href="#">Мы в инстаграмм</a>
+            <li class="footer-nav__item">
+              <a href="#reviews">Отзывы</a>
             </li>
-            <li class="social-btn__item social-btn__item--fb">
-              <a href="#">Мы в фейсбук</a>
+            <li class="footer-nav__item">
+              <a href="#offers">Спец предложения</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#сertificates">Сертификаты</a>
             </li>
           </ul>
-        </section>
-      </nav>
-
+          <section class="social-btn social-btn--footer">
+            <p class="social-btn__text-hidden">Пишите нам</p>
+            <ul class="social-btn__list">
+              <!-- <li class="social-btn__item social-btn__item--ok">
+                <a href="#" target="_blank">Мы в одноклассниках</a>
+              </li> -->
+              <!-- <li class="social-btn__item social-btn__item--vk">
+                <a href="#" target="_blank">Мы в контакте</a>
+              </li> -->
+              <li class="social-btn__item social-btn__item--insta">
+                <a href="https://www.instagram.com/prazdnik.barnaul/" target="_blank">Мы в инстаграмм</a>
+              </li>
+              <!-- <li class="social-btn__item social-btn__item--fb">
+                <a href="#" target="_blank">Мы в фейсбук</a>
+              </li> -->
+            </ul>
+          </section>
+        </nav>
+      </div>
+      <div class="main-footer__copyright">Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a> is licensed by CC BY 3.0</div>
     </div>
-    <div>Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a> is licensed by CC BY 3.0</div>
   </footer>
-  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <!-- подключаем jquery -->
-  <!-- <script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>   -->
+  <script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
   <!--  подключаем плагин -->
-  <!-- <script type="text/javascript" charset="utf-8" src="js/index.js"></script>  -->
+  <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
   <!-- добавляем id видеофайла с youtube -->
 </body>
 
