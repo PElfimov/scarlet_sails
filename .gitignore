@@ -4,6 +4,7 @@
 *.log
 *.pdf
 *.psd
+*.cdr
 *.sublime*
 build/
 css/*.css
