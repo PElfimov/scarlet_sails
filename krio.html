@@ -37,7 +37,7 @@
           <p class="show-description__text show-description__text--characteristics"><b>Стоимость шоу:</b> 3700 рублей, до 15-ти человек</p>
         </div>
       </article>
-      <a class="btn" href="#">Закзать</a>
+      <a class="btn show-description__btn" href="#">Закзать шоу</a>
       <ul class="show-description__gallery">
         <li class="show-description__gallery-item"><img src="img/krio1.jpg" alt="фотография крио-шоу" width="171" height="123"></li>
         <li class="show-description__gallery-item"><img src="img/krio2.jpg" alt="фотография крио-шоу" width="171" height="123"></li>
@@ -46,11 +46,25 @@
         <li class="show-description__gallery-item"><img src="img/krio5.jpg" alt="фотография крио-шоу" width="171" height="123"></li>
         <li class="show-description__gallery-item"><img src="img/krio6.jpg" alt="фотография крио-шоу" width="171" height="123"></li>
       </ul>
-      <div class="video-description">
+      <div class="show-description__video">
         <iframe width="465" height="281" src="https://www.youtube.com/embed/LWV5eVx4ymg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </main>
+  <div class="modal-content modal-content--order">
+      <button class="modal-content__btn-close btn-close" type="button" title="Закрыть">Закрыть</button>
+      <h2 class="modal-content__title">Заказать</h2>
+      <p class="modal-content__text">Для заказа шоу-программы заполните форму заказа</p>
+      <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
+        <input class="order-form__input" type="text" name="user" placeholder="Ваше имя">
+        <input class="order-form__input" type="tel"  name="phone" placeholder="Ваш телефон">
+        <label class="order-form__checkbox">
+          <input type="checkbox" name="personal-data">
+          Я соглашаюсь на передачу персональных данных согласно пользовательскому соглашению и политике конфиденциальности данного сайта
+        </label>
+        <button class="btn order-form__btn" type="submit">Заказать</button>
+      </form>
+    </div>
 </body>
 
 </html>
