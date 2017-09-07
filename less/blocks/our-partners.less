@@ -1,9 +1,11 @@
 .our-partners {
   display: block;
-  min-height: 500px;
   padding-top: 184px;
 }
 
+.our-partners__inner {
+  .container;
+}
 
 .our-partners__title {
   display: block;
@@ -16,4 +18,26 @@
   text-transform: uppercase;
   text-align: center;
   width: 650px;
+}
+
+.our-partners__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+
+}
+
+.our-partners__item {
+  list-style: none;
+  // background-color: @bg-blue;
+  // border: solid 3px @bg-dark-blue-text;
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.our-partners__item img {
+  width: auto;
+  height: 70px;
 }
