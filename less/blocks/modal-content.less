@@ -1,19 +1,48 @@
-.modal-content {
-  width: 322px;
-  min-height: 480px;
-  margin: 50px;
-  background-image: url("../img/popup.svg");
-  background-repeat: no-repeat;
-  background-size: 342px 480px;
-  position: relative;
-  padding: 74px 10px 10px;
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px) translateX(-50%);
+  }
 
+  70% {
+    transform: translateY(30px) translateX(-50%);
+  }
+
+  90% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+.modal-content {
+  width: 450px;
+  min-height: 438px;
+  background-image: url("../img/popup.svg"), url("../img/pattern2.png");
+  background-size: 342px 480px, 180px 180px;
+  background-repeat: no-repeat, repeat;
+  background-position: top 36px left 50%, center;
+  background-color: #062D42;
+  position: relative;
+  padding: 109px 10px 10px;
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  z-index: 100;
+  transform: translateX(-50%);
+}
+
+.modal-content--show {
+  display: block;
+  animation: bounce 0.6s;
 }
 
 .modal-content__btn-close {
   position: absolute;
-  top: -90px;
-  right: -100px;
+  top: -50px;
+  right: -50px;
 }
 
 .modal-content__title {
@@ -36,6 +65,5 @@
   text-transform: uppercase;
   font-weight: 700;
   color: #FFFFFF;
-
   width: 250px;
 }

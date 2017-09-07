@@ -72,7 +72,7 @@
         </p>
         <div class="capture-page__btn">
           <a class="btn" href="#show">Узнать подробнее</a>
-          <a class="btn btn--transparent" href="#">Заказать консультацию</a>
+          <a class="btn btn--transparent js-consultation" href="#">Заказать консультацию</a>
         </div>
       </div>
       <div class="">
@@ -442,10 +442,10 @@
     <h2 class="modal-content__title">Заказать</h2>
     <p class="modal-content__text">Для заказа шоу-программы заполните форму заказа</p>
     <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
-      <input class="order-form__input" type="text" name="user" placeholder="Ваше имя">
-      <input class="order-form__input" type="tel" name="phone" placeholder="Ваш телефон">
-      <label class="order-form__checkbox">
-          <input type="checkbox" name="personal-data">
+      <input class="order-form__input" type="text" name="user" placeholder="Ваше имя" required>
+      <input class="order-form__input" type="tel" name="phone" placeholder="Ваш телефон" required>
+      <label class="order-form__checkbox" required>
+          <input type="checkbox" name="personal-data" required>
           Я соглашаюсь на передачу персональных данных согласно пользовательскому соглашению и политике конфиденциальности данного сайта
         </label>
       <button class="btn order-form__btn" type="submit">Заказать</button>
@@ -456,15 +456,16 @@
     <h2 class="modal-content__title">Заказать консультацию</h2>
     <p class="modal-content__text">Оставьте заявку и мы свяжемся с вами в ближайшее время, чтобы ответить на ваши вопросы</p>
     <form class="order-form order-form--consultation" action="https://echo.htmlacademy.ru" method="post">
-      <input class="order-form__input" type="text" name="user" placeholder="Ваше имя">
-      <input class="order-form__input" type="tel" name="phone" placeholder="Ваш телефон">
+      <input class="order-form__input" type="text" name="user" placeholder="Ваше имя" required>
+      <input class="order-form__input" type="tel" name="phone" placeholder="Ваш телефон" required>
       <label class="order-form__checkbox">
-            <input type="checkbox" name="personal-data">
+            <input type="checkbox" name="personal-data" required>
             Я соглашаюсь на передачу персональных данных согласно пользовательскому соглашению и политике конфиденциальности данного сайта
           </label>
       <button class="btn order-form__btn" type="submit">Заказать</button>
     </form>
   </div>
+  <script type="text/javascript" charset="utf-8" src="js/popup.js"></script>
   <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
   <!-- подключаем jquery -->
   <!-- <script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script> -->
