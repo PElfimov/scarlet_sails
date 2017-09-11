@@ -54,6 +54,18 @@ module.exports = function(grunt) {
       }
     },
 
+    php: {
+        dist: {
+            options: {
+                hostname: '127.0.0.1',
+                port: 9000,
+                base: "build/", // Project root
+                keepalive: false,
+                open: false
+            }
+        }
+    },
+
     browserSync: {
       server: {
         bsFiles: {
@@ -72,13 +84,41 @@ module.exports = function(grunt) {
           cors: true,
           ui: false
         }
-      }
+      },
+      dist: {
+           bsFiles: {
+             src: [
+               "build/*.html",
+               "build/css/*.css",
+               "build/js/*.js",
+               "build/*.php"
+
+             ]
+           },
+           options: {
+               proxy: '<%= php.dist.options.hostname %>:<%= php.dist.options.port %>',
+               watchTask: true,
+               notify: true,
+               open: true,
+               logLevel: 'silent',
+               ghostMode: {
+                   clicks: true,
+                   scroll: true,
+                   links: true,
+                   forms: true
+               }
+           }
+       }
     },
 
     watch: {
       html: {
         files: ["*.html"],
         tasks: ["copy:html"]
+      },
+      html: {
+        files: ["*.php"],
+        tasks: ["copy:php"]
       },
       js: {
         files: ["js/*.js"],
@@ -107,6 +147,13 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           src: ["*.html"],
+          dest: "build"
+        }]
+      },
+      php: {
+        files: [{
+          expand: true,
+          src: ["*.php"],
           dest: "build"
         }]
       },
@@ -148,7 +195,15 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask("symbols", ["svgmin", "svgstore"]);
-  grunt.registerTask("serve", ["browserSync", "watch"]);
+  grunt.registerTask("serve", [
+    "browserSync:server",
+    "watch"
+  ]);
+  grunt.registerTask("servephp", [
+    "php:dist",         // Start PHP Server
+    "browserSync:dist",
+    "watch"
+  ]);
   grunt.registerTask("build", [
     "clean",
     "copy",
