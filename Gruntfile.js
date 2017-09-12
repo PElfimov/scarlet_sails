@@ -59,7 +59,7 @@ module.exports = function(grunt) {
             options: {
                 hostname: '127.0.0.1',
                 port: 9000,
-                base: "build/", // Project root
+                base: "build", // Project root
                 keepalive: false,
                 open: false
             }
@@ -153,7 +153,9 @@ module.exports = function(grunt) {
       php: {
         files: [{
           expand: true,
-          src: ["*.php"],
+          src: ["*.php",
+          "php/**/*.php"
+        ],
           dest: "build"
         }]
       },
