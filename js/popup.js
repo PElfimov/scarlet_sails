@@ -3,6 +3,7 @@ var linkOrders = document.querySelectorAll(".js-order"),
   index, linkOrder;
 var popup = document.querySelector(".modal-content--consultation");
 var popupOrder = document.querySelector(".modal-content--order");
+var popupthenks = document.querySelector(".modal-content--thanks");
 var closes = document.querySelectorAll(".modal-content__btn-close"),
   close;
 var user = popup.querySelector("[name=user]");
@@ -16,6 +17,10 @@ link.addEventListener("click", function(event) {
   event.preventDefault();
   popup.classList.add("modal-content--show");
   user.focus();
+  if (popupOrder.classList.contains("modal-content--show")) {
+    popupOrder.classList.remove("modal-content--show");
+
+  }
 });
 
 for (index = 0; index < linkOrders.length; index++) {
@@ -30,6 +35,10 @@ function clickHandler(event) {
   event.preventDefault();
   popupOrder.classList.add("modal-content--show");
   user.focus();
+  if (popup.classList.contains("modal-content--show")) {
+    popup.classList.remove("modal-content--show");
+
+  }
 
 }
 
@@ -49,6 +58,9 @@ function clickClose(event) {
   if (popupOrder.classList.contains("modal-content--show")) {
     popupOrder.classList.remove("modal-content--show");
   }
+  if (popupthenks.classList.contains("modal-content--show")) {
+    popupthenks.classList.remove("modal-content--show");
+  }
 }
 
 
@@ -60,6 +72,9 @@ window.addEventListener("keydown", function(event) {
     }
     if (popupOrder.classList.contains("modal-content--show")) {
       popupOrder.classList.remove("modal-content--show");
+    }
+    if (popupthenks.classList.contains("modal-content--show")) {
+      popupthenks.classList.remove("modal-content--show");
     }
 
   }
