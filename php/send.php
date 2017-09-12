@@ -3,29 +3,37 @@
 echo "Привет, меня зовут Иван" ;
 print_r(array_values($_POST));
 $fio = $_POST['user'];
-$email = $_POST['phone'];
+$phone = $_POST['phone'];
 $checkbox = $_POST['personal-data'];
 
 $fio = htmlspecialchars($fio);
-$email = htmlspecialchars($email);
+$phone = htmlspecialchars($phone);
 
 $fio = urldecode($fio);
-$email = urldecode($email);
+$phone = urldecode($phone);
 
 $fio = trim($fio);
-$email = trim($email);
+$phone = trim($phone);
+
 $emailAddress="info@t-kartika.ru";
 
+$referer = $_SERVER['HTTP_REFERER'];
 echo $fio;
 echo "<br>";
-echo $email;
+echo $phone;
+echo "<br>";
+echo $referer;
 
 include "libmail.php"; //Класс для работы с мейлом через smtp SSL/TSL
 $m= new Mail("utf-8"); // начинаем
 $m->From( " Server Notification;pelfimov@yandex.ru" ); // от кого отправляется почта
 $m->To( $emailAddress ); // кому адресованно
-$m->Subject( "Registration" );
-$m->Body( "Вы зарегистрировались. Ваш пароль:");
+$m->Subject("Новая заявка с сайта ");
+$m->Body(
+"Новая заявка с сайта
+Cсылка перехода  $referer
+ИМЯ  $fio
+Оставленный телефон $phone");
 $m->Priority(3);// приоритет письма
 $m->smtp_on("ssl://smtp.yandex.ru","pelfimov","24m7#4be", 465);
 $m->Send();    // а теперь пошла отправка

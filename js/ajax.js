@@ -1,13 +1,15 @@
-$(document).ready(function(){
-    $("#form").submit(function() {
-        var form_data = $(this).serialize();
-        $.ajax({
-        type: "POST",
-        url: "../send.php",
-        data: form_data,
-        success: function() {
-               alert("Ваше сообщение отпрвлено!");
-        } // забыли закрыть success
+function call() {
+  var msg   = $('#formx').serialize();
+      $.ajax({
+        type: 'POST',
+        url: 'php/send.php',
+        data: msg,
+        success: function(data) {
+          $('#results').html(data);
+        },
+        error:  function(xhr, str){
+    alert('Возникла ошибка: ' + xhr.responseCode);
+        }
       });
-    });
-});
+
+  }
