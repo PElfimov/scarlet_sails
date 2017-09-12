@@ -5,6 +5,7 @@ print_r(array_values($_POST));
 $fio = $_POST['user'];
 $phone = $_POST['phone'];
 $checkbox = $_POST['personal-data'];
+$formname = $_POST['formname'];
 
 $fio = htmlspecialchars($fio);
 $phone = htmlspecialchars($phone);
@@ -33,7 +34,8 @@ $m->Body(
 "Новая заявка с сайта
 Cсылка перехода  $referer
 ИМЯ  $fio
-Оставленный телефон $phone");
+Оставленный телефон $phone
+Наименование формы $formname");
 $m->Priority(3);// приоритет письма
 $m->smtp_on("ssl://smtp.yandex.ru","pelfimov","24m7#4be", 465);
 $m->Send();    // а теперь пошла отправка

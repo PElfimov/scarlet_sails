@@ -441,13 +441,14 @@
     <button class="modal-content__btn-close btn-close" type="button" title="Закрыть">Закрыть</button>
     <h2 class="modal-content__title">Заказать</h2>
     <p class="modal-content__text">Для заказа шоу-программы заполните форму заказа</p>
-    <form id="formx" class="order-form" action="javascript:void(null);" method="post" onsubmit="call()">
+    <form id="formx" class="order-form" action="javascript:void(null);" method="post" onsubmit="callorder()">
       <input class="order-form__input" type="text" name="user" placeholder="Ваше имя" required>
       <input class="order-form__input" type="tel" name="phone" placeholder="Ваш телефон" required>
       <label class="order-form__checkbox" required>
           <input type="checkbox" name="personal-data" required>
           Я соглашаюсь на передачу персональных данных согласно пользовательскому соглашению и политике конфиденциальности данного сайта
         </label>
+      <input type="hidden" name="formname" value="Заказ шоу">
       <button class="btn order-form__btn" type="submit">Заказать</button>
     </form>
   </div>
@@ -455,13 +456,14 @@
     <button class="modal-content__btn-close btn-close" type="button" title="Закрыть">Закрыть</button>
     <h2 class="modal-content__title">Заказать консультацию</h2>
     <p class="modal-content__text">Оставьте заявку и мы свяжемся с вами в ближайшее время, чтобы ответить на ваши вопросы</p>
-    <form class="order-form order-form--consultation" action="https://echo.htmlacademy.ru" method="post">
+    <form id="formy" class="order-form order-form--consultation" action="javascript:void(null);" method="post" onsubmit="callconcult()">
       <input class="order-form__input" type="text" name="user" placeholder="Ваше имя" required>
       <input class="order-form__input" type="tel" name="phone" placeholder="Ваш телефон" required>
       <label class="order-form__checkbox">
             <input type="checkbox" name="personal-data" required>
             Я соглашаюсь на передачу персональных данных согласно пользовательскому соглашению и политике конфиденциальности данного сайта
           </label>
+      <input type="hidden" name="formname" value="Консультация">
       <button class="btn order-form__btn" type="submit">Заказать</button>
     </form>
   </div>
