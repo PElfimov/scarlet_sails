@@ -137,6 +137,7 @@ module.exports = function(grunt) {
           src: [
             "fonts/**/*.{woff,woff2}",
             "img/**",
+            "fancybox/**",
             "js/**",
             "*.html"
           ],
