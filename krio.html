@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-  <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+
+
 </head>
 
 <body>
@@ -46,22 +47,32 @@
             <img src="img/krio1.jpg" alt="фотография крио-шоу" width="171" height="123">
           </a>
         </li>
-        <li class="show-description__gallery-item"><img src="img/krio2.jpg" alt="фотография крио-шоу" width="171" height="123"></li>
-        <li class="show-description__gallery-item"><img src="img/krio3.jpg" alt="фотография крио-шоу" width="171" height="123"></li>
-        <li class="show-description__gallery-item"><img src="img/krio4.jpg" alt="фотография крио-шоу" width="171" height="123"></li>
-        <li class="show-description__gallery-item"><img src="img/krio5.jpg" alt="фотография крио-шоу" width="171" height="123"></li>
-        <li class="show-description__gallery-item"><img src="img/krio6.jpg" alt="фотография крио-шоу" width="171" height="123"></li>
+        <li class="show-description__gallery-item">
+          <a href="img/krio2.jpg" class="fancybox" rel="gallery" title="Sample title">
+            <img src="img/krio2.jpg" alt="фотография крио-шоу" width="171" height="123">
+          </a>
+        </li>
+        <li class="show-description__gallery-item">
+          <a href="img/krio3.jpg" class="fancybox" rel="gallery" title="Sample title">
+            <img src="img/krio3.jpg" alt="фотография крио-шоу" width="171" height="123">
+          </a>
+        </li>
+        <li class="show-description__gallery-item">
+          <a href="img/krio4.jpg" class="fancybox" rel="gallery" title="Sample title">
+            <img src="img/krio4.jpg" alt="фотография крио-шоу" width="171" height="123">
+          </a>
+        </li>
+        <li class="show-description__gallery-item">
+          <a href="img/krio5.jpg" class="fancybox" rel="gallery" title="Sample title">
+            <img src="img/krio5.jpg" alt="фотография крио-шоу" width="171" height="123">
+          </a>
+        </li>
+        <li class="show-description__gallery-item">
+          <a href="img/krio6.jpg" class="fancybox" rel="gallery" title="Sample title">
+            <img src="img/krio6.jpg" alt="фотография крио-шоу" width="171" height="123">
+          </a>
+        </li>
       </ul>
-      <h3>Simple image gallery</h3>
-    	<p>
-    		<a class="fancybox" href="img/fancybox/1_b.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="1_s.jpg" alt="" /></a>
-
-    		<a class="fancybox" href="img/fancybox/2_b.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="2_s.jpg" alt="" /></a>
-
-    		<a class="fancybox" href="img/fancybox/3_b.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="img/fancybox/3_s.jpg" alt="" /></a>
-
-    		<a class="fancybox" href="img/fancybox/4_b.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="img/fancybox/4_s.jpg" alt="" /></a>
-    	</p>
       <div class="show-description__video">
         <iframe width="465" height="281" src="https://www.youtube.com/embed/LWV5eVx4ymg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
       </div>
@@ -89,6 +100,12 @@
 
   </div>
   <script type="text/javascript" charset="utf-8" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/fancybox/jquery.fancybox.pack.js"></script>
+  <script>
+      $(document).ready(function() {
+          $('.fancybox').fancybox();
+      });
+  </script>
   <script type="text/javascript" charset="utf-8" src="js/popupdescription.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ajax.js"></script>
 
