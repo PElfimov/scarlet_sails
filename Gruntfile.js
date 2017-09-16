@@ -116,7 +116,7 @@ module.exports = function(grunt) {
         files: ["*.html"],
         tasks: ["copy:html"]
       },
-      html: {
+      php: {
         files: ["*.php"],
         tasks: ["copy:php"]
       },
