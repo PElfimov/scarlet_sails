@@ -45,7 +45,7 @@
     <section class="gallery">
       <h2 class="gallery__text-hidden">Галерея</h2>
       <div class="gallery__inner">
-        <button class="btn-reviews btn-reviews--blue-left" type="button" onclick="move(this, '.gallery', 'left')" disabled="disabled"></button>
+        <button class="btn-reviews btn-reviews--blue-left" type="button" onclick="moveUp(this, '.gallery', 'left')" disabled="disabled"></button>
         <div class="gallery__wrapper">
           <ul class="gallery__list">
             <li class="gallery__item">
@@ -153,10 +153,9 @@
                 <img src="img/show/mini/20krio.jpg" alt="" width="171">
               </a>
             </li>
-
           </ul>
         </div>
-        <button class="btn-reviews btn-reviews--blue-right" type="button" onclick="move(this, '.gallery', 'right')"></button>
+        <button class="btn-reviews btn-reviews--blue-right" type="button" onclick="moveUp(this, '.gallery', 'right')"></button>
       </div>
     </section>
     <div class="show-description__video">
@@ -197,7 +196,7 @@
   </script>
   <script type="text/javascript" charset="utf-8" src="js/popupdescription.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ajax.js"></script>
-
+  <script type="text/javascript" charset="utf-8" src="js/move-up.js"></script>
 </body>
 
 </html>
