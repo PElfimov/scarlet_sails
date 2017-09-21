@@ -1,5 +1,5 @@
 var step = "380";
-var list, сlassSection, direction, btn, obj;
+var list, сlassSection, direction, btn, obj, shift;
 var i = 0;
 
 function moveUp(obj, сlassSection, direction) {
@@ -15,12 +15,12 @@ function moveUp(obj, сlassSection, direction) {
     if ($(btn[1]).prop('disabled')) {
       $(btn[1]).removeAttr('disabled')
     };
-    $(obj).attr('disabled', 'disabled');
+    // $(obj).attr('disabled', 'disabled');
 
   } else {
     console.log("Двигаем вправо");
     moveright();
-    $(obj).attr('disabled', 'disabled');
+    // $(obj).attr('disabled', 'disabled');
     if ($(btn[0]).prop('disabled')) {
       $(btn[0]).removeAttr('disabled')
     };
@@ -33,22 +33,37 @@ function moveUp(obj, сlassSection, direction) {
 function moveleft() {
 
   $(list).addClass("jsmove--left");
- //  $(list).css({
- //    '--moveUP': 'translateX(200px)'
- // });
-  if ( $(list).hasClass('jsmove--right') ) {
+  //  $(list).css({
+  //    '--moveUP': 'translateX(px)'
+  // });
+  if ($(list).hasClass('jsmove--right')) {
     $(list).removeClass('jsmove--right')
   }
 
 }
 
 function moveright() {
+  var el = $(list),
+    newone = el.clone(true);
 
-    // list.style.setProperty('--move-up', '50px');
-    $(list).addClass("jsmove--right");
-    if ( $(list).hasClass('jsmove--left') ) {
-      $(list).removeClass('jsmove--left')
-    };
+  el.before(newone);
+
+  $("." + el.attr("class") + ":last").remove();
+
+
+
+  i = i + 1;
+  shift = step * i;
+  console.log(i, step);
+  $(list).addClass("jsmove--right");
+  $(list).css({
+    '--moveRightStart': 'translateX(-600px) translateY(-' + shift + 'px)',
+    '--moveRightStop': 'translateX(0) translateY(-' + shift + 'px)'
+  });
+  if ($(list).hasClass('jsmove--left')) {
+    $(list).removeClass('jsmove--left')
+  };
+
 
 
 
