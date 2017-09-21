@@ -33,6 +33,9 @@ function moveUp(obj, сlassSection, direction) {
 function moveleft() {
 
   $(list).addClass("jsmove--left");
+ //  $(list).css({
+ //    '--moveUP': 'translateX(200px)'
+ // });
   if ( $(list).hasClass('jsmove--right') ) {
     $(list).removeClass('jsmove--right')
   }
