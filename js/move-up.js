@@ -32,21 +32,21 @@ function moveUp(obj, сlassSection, direction) {
 
 function moveleft() {
 
-  $(list).css({
-    transform: "translateY(0)",
-    // transition: ".6s transform"
-  });
-  $(list).addClass("jsmove jsmove--left");
+  $(list).addClass("jsmove--left");
+  if ( $(list).hasClass('jsmove--right') ) {
+    $(list).removeClass('jsmove--right')
+  }
 
 }
 
 function moveright() {
 
-  $(list).css({
+    // list.style.setProperty('--move-up', '50px');
+    $(list).addClass("jsmove--right");
+    if ( $(list).hasClass('jsmove--left') ) {
+      $(list).removeClass('jsmove--left')
+    };
 
-    transform: "translateY(-" + step + "px)",
-    // transition: ".6s transform"
-  });
 
 
 }
