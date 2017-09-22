@@ -1,4 +1,4 @@
-var step = "376";
+var step=374;
 var list, сlassSection, direction, btn, obj, shift, sumStep;
 var i = 0;
 
