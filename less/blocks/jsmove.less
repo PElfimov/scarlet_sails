@@ -1,38 +1,69 @@
-
-
-.jsmove--left{
-    --moveLeftStart: translateX(600px) translateY(0);
-    --moveLeftStop: translateX(0) translateY(0);
-    animation-name: move-left;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+.jsmove--left {
+  --moveStart: translateX(600px) translateY(0);
+  --moveStop: translateX(0) translateY(0);
+  animation-name: move-left;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
+.jsmove--left1 {
+  --moveStart: translateX(600px) translateY(0);
+  --moveStop: translateX(0) translateY(0);
+  animation-name: move-left1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
 @keyframes move-left {
-    0% {
-        transform: var(--moveLeftStart) ;
+  0% {
+    transform: var(--moveStart);
+  }
 
-    }
+  100% {
+    transform: var(--moveStop);
+  }
+}
+@keyframes move-left1 {
+  0% {
+    transform: var(--moveStart);
+  }
 
-    100% {
-        transform: var(--moveLeftStop);
-    }
+  100% {
+    transform: var(--moveStop);
+  }
 }
 
-.jsmove--right{
-    --moveRightStart: translateX(-600px) translateY(-300px);
-    --moveRightStop: translateX(0) translateY(-300px);
-    animation-name: move-right;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+.jsmove--right {
+  --moveStart: translateX(-600px) translateY(-300px);
+  --moveStop: translateX(0) translateY(-300px);
+  animation-name: move-right;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.jsmove--right1 {
+  --moveStart: translateX(-600px) translateY(-300px);
+  --moveStop: translateX(0) translateY(-300px);
+  animation-name: move-right1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes move-right {
-    0% {
-        transform: var(--moveRightStart) ;
-    }
+  0% {
+    transform: var(--moveStart);
+  }
 
-    100% {
-        transform: var(--moveRightStop);
-    }
+  100% {
+    transform: var(--moveStop);
+  }
+}
+
+@keyframes move-right1 {
+  0% {
+    transform: var(--moveStart);
+  }
+
+  100% {
+    transform: var(--moveStop);
+  }
 }

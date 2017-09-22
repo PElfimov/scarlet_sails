@@ -1,70 +1,82 @@
-var step = "380";
-var list, сlassSection, direction, btn, obj, shift;
+var step = "376";
+var list, сlassSection, direction, btn, obj, shift, sumStep;
 var i = 0;
 
-function moveUp(obj, сlassSection, direction) {
+function moveUp(obj, сlassSection, sumStep) {
   btn = document.querySelector(сlassSection).querySelectorAll("button");
   list = document.querySelector(сlassSection).querySelectorAll("ul");
-  console.log(сlassSection);
-  console.log(direction);
-  console.log(btn);
-  console.log(obj);
   if (obj == btn[0]) {
-    console.log("Двигаем влево");
     moveleft();
-    if ($(btn[1]).prop('disabled')) {
-      $(btn[1]).removeAttr('disabled')
-    };
-    // $(obj).attr('disabled', 'disabled');
 
   } else {
-    console.log("Двигаем вправо");
     moveright();
-    // $(obj).attr('disabled', 'disabled');
-    if ($(btn[0]).prop('disabled')) {
-      $(btn[0]).removeAttr('disabled')
-    };
-
   }
+  if ($(btn[0]).prop('disabled') && (i >= 1)) {
+    $(btn[0]).removeAttr('disabled')
+  };
+  if (i <= 0) {
+    $(btn[0]).attr('disabled', 'disabled');
+  };
+  if (i >= (sumStep - 1)) {
+    $(btn[1]).attr('disabled', 'disabled');
+  };
 
+  if ($(btn[1]).prop('disabled') && (i < (sumStep-1))) {
+    $(btn[1]).removeAttr('disabled')
+  };
 
 }
 
 function moveleft() {
+  i = i - 1;
+  shift = step * i;
+  $(list).css({
+    '--moveStart': 'translateX(600px) translateY(-' + shift + 'px)',
+    '--moveStop': 'translateX(0) translateY(-' + shift + 'px)'
+  });
 
-  $(list).addClass("jsmove--left");
-  //  $(list).css({
-  //    '--moveUP': 'translateX(px)'
-  // });
-  if ($(list).hasClass('jsmove--right')) {
-    $(list).removeClass('jsmove--right')
-  }
+  if ($(list).hasClass('jsmove--right') || $(list).hasClass('jsmove--right1')) {
+
+    if ($(list).hasClass('jsmove--right')) {
+      $(list).removeClass('jsmove--right')
+    };
+
+    if ($(list).hasClass('jsmove--right1')) {
+      $(list).removeClass('jsmove--right1')
+    };
+
+    $(list).addClass("jsmove--left");
+  } else if ($(list).hasClass('jsmove--left')) {
+    $(list).removeClass('jsmove--left');
+    $(list).addClass("jsmove--left1");
+  } else if ($(list).hasClass('jsmove--left1')) {
+    $(list).removeClass('jsmove--left1');
+    $(list).addClass("jsmove--left");
+  };
 
 }
 
 function moveright() {
-  var el = $(list),
-    newone = el.clone(true);
-
-  el.before(newone);
-
-  $("." + el.attr("class") + ":last").remove();
-
-
 
   i = i + 1;
   shift = step * i;
-  console.log(i, step);
-  $(list).addClass("jsmove--right");
   $(list).css({
-    '--moveRightStart': 'translateX(-600px) translateY(-' + shift + 'px)',
-    '--moveRightStop': 'translateX(0) translateY(-' + shift + 'px)'
+    '--moveStart': 'translateX(-600px) translateY(-' + shift + 'px)',
+    '--moveStop': 'translateX(0) translateY(-' + shift + 'px)'
   });
   if ($(list).hasClass('jsmove--left')) {
     $(list).removeClass('jsmove--left')
   };
-
-
-
-
+  if ($(list).hasClass('jsmove--left1')) {
+    $(list).removeClass('jsmove--left1')
+  };
+  if (i == 1) {
+    $(list).addClass("jsmove--right");
+  } else if ($(list).hasClass('jsmove--right')) {
+    $(list).removeClass('jsmove--right');
+    $(list).addClass("jsmove--right1");
+  } else if ($(list).hasClass('jsmove--right1')) {
+    $(list).removeClass('jsmove--right1');
+    $(list).addClass("jsmove--right");
+  }
 }
