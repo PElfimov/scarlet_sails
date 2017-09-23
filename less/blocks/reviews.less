@@ -1,0 +1,118 @@
+.reviews {
+  background-image: url("../img/videoline.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 680px;
+  margin-top: 0;
+  padding-top: 104px;
+}
+
+.reviews__title {
+  display: block;
+  margin: 0 auto;
+  font-family: 'PFPlayskoolPro-3D';
+  text-decoration: none;
+  font-size: 70px;
+  line-height: 75px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+  width: 650px;
+}
+
+.reviews__inner {
+  .container;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reviews__wrapper {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 710px;
+}
+
+.reviews__list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 22px;
+  padding: 0;
+}
+
+.reviews__item {
+  list-style-type: none;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  line-height: 16px;
+  margin: 10px;
+  min-width: 196px;
+
+}
+
+.reviews__item a{
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  color: @bg-dark-blue-text;
+  position: relative;
+  text-align: right;
+  padding-left: 60px;
+  margin-right: 20px;
+  margin-bottom: 36px;
+  margin-top: 40px;
+}
+
+.reviews__item a::after{
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50%;
+  background-color: @bg-dark-blue-text;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/reviews/profile.svg");
+  background-size: 30px;
+
+
+}
+
+.reviews__item{
+  &--vladimir a::after{
+    background-image: url("../img/reviews/vladimir.jpg");
+    background-size: 70px;
+  }
+  &--elena a::after{
+    background-image: url("../img/reviews/elena.jpg");
+    background-size: 50px;
+  }
+  }
+
+
+.reviews__btn {
+  width: 50px;
+  height: 50px;
+  background-size: 50px;
+}
+
+.reviews__btn {
+  width: 50px;
+  height: 50px;
+  background-size: 50px;
+}
+
+.reviews__end{
+  height: 10px;
+}

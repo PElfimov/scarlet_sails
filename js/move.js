@@ -1,50 +1,60 @@
 var step = "680";
-var list, сlassSection, direction, btn, obj;
+var list, сlassSection, direction, btn, obj, sumStep,сlassSectionTrue;
 var i = 0;
 
-function move(obj, сlassSection, direction) {
+
+function move(obj, сlassSection, direction, shift, sumStep) {
   btn = document.querySelector(сlassSection).querySelectorAll("button");
   list = document.querySelector(сlassSection).querySelectorAll("ul");
-  console.log(сlassSection);
-  console.log(direction);
-  console.log(btn);
-  console.log(obj);
+  step=shift;
+  if (сlassSectionTrue!=сlassSection) {
+    сlassSectionTrue=сlassSection;
+    i=0;
+    $(list).css({
+      transform: "translateX(0)"
+    });
+  };
+
+
+
   if (obj == btn[0]) {
-    console.log("Двигаем влево");
+    i = i - 1;
     moveleft();
-    if ($(btn[1]).prop('disabled')) {
-      $(btn[1]).removeAttr('disabled')
-    };
-    $(obj).attr('disabled', 'disabled');
+
 
   } else {
-    console.log("Двигаем вправо");
+    i = i + 1;
     moveright();
-    $(obj).attr('disabled', 'disabled');
-    if ($(btn[0]).prop('disabled')) {
-      $(btn[0]).removeAttr('disabled')
-    };
 
   }
+  if ($(btn[0]).prop('disabled') && (i >= 1)) {
+    $(btn[0]).removeAttr('disabled')
+  };
+  if (i <= 0) {
+    $(btn[0]).attr('disabled', 'disabled');
+  };
+  if (i >= (sumStep - 1)) {
+    $(btn[1]).attr('disabled', 'disabled');
+  };
 
+  if ($(btn[1]).prop('disabled') && (i < (sumStep-1))) {
+    $(btn[1]).removeAttr('disabled')
+  };
 
 }
 
 function moveleft() {
-
+  shift = step * i;
   $(list).css({
-    transform: "translateX(0)",
+    transform: "translateX(-" + shift + "px)",
     transition: ".6s transform"
   });
-
 }
 
 function moveright() {
-
+  shift = step * i;
   $(list).css({
-    transform: "translateX(-" + step + "px)",
+    transform: "translateX(-" + shift + "px)",
     transition: ".6s transform"
   });
-
-
 }
