@@ -31,7 +31,7 @@ function moveleft() {
   i = i - 1;
   shift = step * i;
   $(list).css({
-    '--moveStart': 'translateX(600px) translateY(-' + shift + 'px)',
+    '--moveStart': 'translateX(-600px) translateY(-' + shift + 'px)',
     '--moveStop': 'translateX(0) translateY(-' + shift + 'px)'
   });
 
@@ -61,7 +61,7 @@ function moveright() {
   i = i + 1;
   shift = step * i;
   $(list).css({
-    '--moveStart': 'translateX(-600px) translateY(-' + shift + 'px)',
+    '--moveStart': 'translateX(600px) translateY(-' + shift + 'px)',
     '--moveStop': 'translateX(0) translateY(-' + shift + 'px)'
   });
   if ($(list).hasClass('jsmove--left')) {
