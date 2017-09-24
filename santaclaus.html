@@ -49,7 +49,7 @@
     <section class="gallery gallery--santa">
       <h2 class="gallery__text-hidden">Галерея</h2>
       <div class="gallery__inner">
-        <button class="btn-reviews btn-reviews--blue-left" type="button" onclick="moveUp(this, '.gallery', 5)" disabled="disabled"></button>
+        <button class="gallery__btn btn-reviews btn-reviews--blue-left" type="button" onclick="moveUp(this, '.gallery', 5)" disabled="disabled"></button>
         <div class="gallery__wrapper">
           <ul class="gallery__list">
             <li class="gallery__item">
@@ -118,7 +118,7 @@
               </a>
           </ul>
         </div>
-        <button class="btn-reviews btn-reviews--blue-right" type="button" onclick="moveUp(this, '.gallery', 5)"></button>
+        <button class=" gallery__btn btn-reviews btn-reviews--blue-right" type="button" onclick="moveUp(this, '.gallery', 5)"></button>
       </div>
     </section>
     <div class="show-description__video">
@@ -134,7 +134,7 @@
       <input class="order-form__input" type="tel" name="phone" placeholder="Ваш телефон" required>
       <label class="order-form__checkbox" required>
           <input type="checkbox" name="personal-data" required>
-          Я соглашаюсь на передачу персональных данных согласно пользовательскому соглашению и политике конфиденциальности данного сайта
+            Я соглашаюсь на передачу персональных данных согласно <a href="termsofuse.html">пользовательскому соглашению</a> и <a href="politic.html">политике конфиденциальности данного сайта</a>
         </label>
       <input type="hidden" name="formname" value="Заказ Деда мороза и снегурочки">
       <button class="btn order-form__btn" type="submit">Заказать</button>
