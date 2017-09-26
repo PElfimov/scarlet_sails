@@ -30,9 +30,6 @@ function moveUp(obj, сlassSection, sumStep) {
 function moveleft() {
   i = i - 1;
   shift = step * i;
-  $(list).css({
-    transform: "translate(-600px, -" + shift + "px)"
-  });
 
   $(list).css({
     transform: "translate(0, -" + shift + "px)",
@@ -46,9 +43,7 @@ function moveright() {
 
   i = i + 1;
   shift = step * i;
-  $(list).css({
-    transform: "translate(600px, -" + shift + "px)"
-  });
+
 
   $(list).css({
     transform: "translate(0, -" + shift + "px)",

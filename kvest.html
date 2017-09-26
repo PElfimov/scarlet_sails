@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Алые Паруса</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+
+
+</head>
+
+<body>
+  <main class="show-description">
+    <div class="show-description__wrapper">
+      <a class="btn-close show-description__btn-close" href="index.html">Закрыть</a>
+      <article class="show-description__article">
+        <h1 class="show-description__title">Квесты для детей</h1>
+        <h2 class="show-description__title">Пиратский квест</h2>
+
+        <p class="show-description__text">
+          Разрази меня гром! Капитан Барракуда снова собирает команду искателей сокровищ для новых приключений. Отважные пираты – где вы? Скорее отправимся проходить испытания на ловкость, смелость и сообразительность. Приходи на борт Черной Жемчужины и назови свое тайное пиратское имя. Вперед! На поиски сокровищ!
+        </p>
+        <p class="show-description__text">
+          Квест адаптирован для игры в любых помещениях в компании до 15-ти человек!
+        </p>
+
+        <div class="show-description__characteristics">
+          <p class="show-description__text show-description__text--characteristics"><b>Продолжительность:</b> 40 мин</p>
+          <p class="show-description__text show-description__text--characteristics"><b>Возраст:</b> 6-10 лет</p>
+          <p class="show-description__text show-description__text--characteristics"><b>Стоимость шоу:</b> 2800руб, 1 ведущий</p>
+        </div>
+      </article>
+      <article class="show-description__article">
+        <h2 class="show-description__title">Квест «Сокровища Дракона»</h2>
+
+        <p class="show-description__text">
+          Страна Драконов – это волшебное место, где рождаются  детские мечты и фантазии, на страже которых находятся сказочные Волшебники Драконы. Двери в эту страну всегда открыты тем, кто верит в чудеса, в ком еще не угасли дух приключений, жажда великих подвигов и гениальных открытий….Но даже в эту надежно укрытую и защищаемую страну пробралось зло… Коварный Колдун похитил Сокровища Драконов, и теперь все детские мечты и фантазии находятся под угрозой. Нам необходимо пройти все задания и ловушки, придуманные Колдуном и вернуть то, что по праву принадлежит нам!!!!  И только великая сила дружбы людей и драконов, их смелость и смекалка  помогут остановить зло…
+        </p>
+        <p class="show-description__text">
+          Квест подходит для игры в больших по площади помещениях, а также на улице в компании до 30-ти человек!
+        </p>
+
+        <div class="show-description__characteristics">
+          <p class="show-description__text show-description__text--characteristics"><b>Продолжительность:</b> от 40 мин</p>
+          <p class="show-description__text show-description__text--characteristics"><b>Возраст:</b>6-12 лет</p>
+          <p class="show-description__text show-description__text--characteristics"><b>Стоимость шоу:</b> до 15-ти человек - 4000 р;</p>
+          <p class="show-description__text show-description__text--characteristics">до 30-ти человек, 2 ведущих - 5000 р </p>
+        </div>
+      </article>
+      <a class="btn show-description__btn js-order" href="#">Заказать шоу</a>
+    </div>
+    <section class="gallery">
+      <h2 class="gallery__text-hidden">Галерея</h2>
+      <div class="gallery__inner">
+        <button class="gallery__btn btn-reviews btn-reviews--blue-left" type="button" onclick="moveUp(this, '.gallery', 4)" disabled="disabled"></button>
+        <div class="gallery__wrapper">
+          <ul class="gallery__list">
+            <li class="gallery__item">
+              <a href="img/show/01pirates.jpg" class="fancybox" rel="gallery">
+                <img src="img/show/mini/01pirates.jpg" alt="" width="171">
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="img/show/02pirates.jpg" class="fancybox" rel="gallery">
+                <img src="img/show/mini/02pirates.jpg" alt="" width="171">
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="img/show/03pirates.jpg" class="fancybox" rel="gallery">
+                <img src="img/show/mini/03pirates.jpg" alt="" width="171">
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="img/show/04pirates.jpg" class="fancybox" rel="gallery">
+                <img src="img/show/mini/04pirates.jpg" alt="" width="171">
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="img/show/05pirates.jpg" class="fancybox" rel="gallery">
+                <img src="img/show/mini/05pirates.jpg" alt="" width="171">
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="img/show/06pirates.jpg" class="fancybox" rel="gallery">
+                <img src="img/show/mini/06pirates.jpg" alt="" width="171">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="gallery__btn btn-reviews btn-reviews--blue-right" type="button" onclick="moveUp(this, '.gallery', 4)" disabled="disabled"></button>
+      </div>
+    </section>
+    <div class="show-description__video">
+
+    </div>
+
+  </main>
+  <div class="modal-content modal-content--order">
+    <button class="modal-content__btn-close btn-close" type="button" title="Закрыть">Закрыть</button>
+    <h2 class="modal-content__title">Заказать</h2>
+    <p class="modal-content__text">Для заказа шоу-программы заполните форму заказа</p>
+    <form id="formx" class="order-form" action="javascript:void(null);" method="post" onsubmit="callorder()">
+      <input class="order-form__input" type="text" name="user" placeholder="Ваше имя" required>
+      <input class="order-form__input" type="tel" name="phone" placeholder="Ваш телефон" required>
+      <label class="order-form__checkbox" required>
+          <input type="checkbox" name="personal-data" required>
+            Я соглашаюсь на передачу персональных данных согласно <a href="termsofuse.html">пользовательскому соглашению</a> и <a href="politic.html">политике конфиденциальности данного сайта</a>
+        </label>
+      <input type="hidden" name="formname" value="Заказ Квест">
+      <button class="btn order-form__btn" type="submit">Заказать</button>
+    </form>
+  </div>
+  <div class="modal-content modal-content--thanks">
+    <button class="modal-content__btn-close btn-close" type="button" title="Закрыть">Закрыть</button>
+    <h2 class="modal-content__title">Спасибо!</h2>
+    <p class="modal-content__text">Ваше сообщение отправлено, наши менеджеры свяжутья с вами в ближайшее время</p>
+
+  </div>
+  <script type="text/javascript" charset="utf-8" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.fancybox').fancybox();
+    });
+  </script>
+  <script type="text/javascript" charset="utf-8" src="js/popupdescription.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/ajax.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/move-up.js"></script>
+</body>
+
+</html>
