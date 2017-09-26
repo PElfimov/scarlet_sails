@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Алые Паруса</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+
+
+</head>
+
+<body>
+  <main class="show-description">
+    <div class="show-description__wrapper">
+      <a class="btn-close show-description__btn-close" href="index.html">Закрыть</a>
+      <article class="show-description__article">
+        <h2 class="show-description__title">Научное шоу «Повелители природы»</h2>
+        <strong class="show-description__strong-text"></strong>
+        <p class="show-description__text">
+          Эта интерактивная программа поможет воплотить в реальность мечту всех детей стать Супергероями и повелевать Природными Стихиями. Вместе с Профессором ребята будут создавать разные природные явления и станут
+        </p>
+        <b class="show-description__list-title">Повелителями:</b>
+        <ul class="show-description__list">
+          <li class="show-description__item">настоящих облаков</li>
+          <li class="show-description__item">ледяного града</li>
+          <li class="show-description__item">узнают опасен ли гром?</li>
+          <li class="show-description__item">запустят торнадо</li>
+          <li class="show-description__item">увидят радугу</li>
+          <li class="show-description__item">узнают, как получается туман</li>
+          <li class="show-description__item">окажутся в самом эпицентре извержения вулкана или гейзера</li>
+        </ul>
+        <p class="show-description__text">
+          А после  всех экспериментов еще и создадут себе подарки -  если останутся силы, конечно)) ведь управление стихиями очень непростое дело… но такое увлекааательное и познавааательное..
+        </p>
+        <div class="show-description__characteristics">
+          <p class="show-description__text show-description__text--characteristics"><b>Продолжительность:</b> 40 мин</p>
+          <p class="show-description__text show-description__text--characteristics"><b>Возраст:</b> 5-12 лет</p>
+          <p class="show-description__text show-description__text--characteristics"><b>Стоимость шоу:</b> 3700 рублей, до 15-ти человек</p>
+        </div>
+      </article>
+      <a class="btn show-description__btn js-order" href="#">Заказать шоу</a>
+    </div>
+    <section class="gallery">
+      <h2 class="gallery__text-hidden">Галерея</h2>
+      <div class="gallery__inner">
+        <button class="gallery__btn btn-reviews btn-reviews--blue-left" type="button" onclick="moveUp(this, '.gallery', 2)" disabled="disabled"></button>
+        <div class="gallery__wrapper">
+          <ul class="gallery__list">
+            <li class="gallery__item">
+              <a href="img/show/01overlords.jpg" class="fancybox" rel="gallery">
+                <img src="img/show/mini/01overlords.jpg" alt="" width="171">
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="img/show/02overlords.jpg" class="fancybox" rel="gallery">
+                <img src="img/show/mini/02overlords.jpg" alt="" width="171">
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="img/show/03overlords.jpg" class="fancybox" rel="gallery">
+                <img src="img/show/mini/03overlords.jpg" alt="" width="171">
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="img/show/04overlords.jpg" class="fancybox" rel="gallery">
+                <img src="img/show/mini/04overlords.jpg" alt="" width="171">
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="img/show/05overlords.jpg" class="fancybox" rel="gallery">
+                <img src="img/show/mini/05overlords.jpg" alt="" width="171">
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="img/show/06overlords.jpg" class="fancybox" rel="gallery">
+                <img src="img/show/mini/06overlords.jpg" alt="" width="171">
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="img/show/07overlords.jpg" class="fancybox" rel="gallery">
+                <img src="img/show/mini/07overlords.jpg" alt="" width="171">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="gallery__btn btn-reviews btn-reviews--blue-right" type="button" onclick="moveUp(this, '.gallery', 2)"></button>
+      </div>
+    </section>
+    <div class="show-description__video">
+      <!-- <iframe width="465" height="281" src="https://www.youtube.com/embed/LWV5eVx4ymg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="show-description__video">
+      <iframe width="465" height="281" src="https://www.youtube.com/embed/Kfu0F2HEyvY" frameborder="0" allowfullscreen></iframe> -->
+    </div>
+
+  </main>
+  <div class="modal-content modal-content--order">
+    <button class="modal-content__btn-close btn-close" type="button" title="Закрыть">Закрыть</button>
+    <h2 class="modal-content__title">Заказать</h2>
+    <p class="modal-content__text">Для заказа шоу-программы заполните форму заказа</p>
+    <form id="formx" class="order-form" action="javascript:void(null);" method="post" onsubmit="callorder()">
+      <input class="order-form__input" type="text" name="user" placeholder="Ваше имя" required>
+      <input class="order-form__input" type="tel" name="phone" placeholder="Ваш телефон" required>
+      <label class="order-form__checkbox" required>
+          <input type="checkbox" name="personal-data" required>
+            Я соглашаюсь на передачу персональных данных согласно <a href="termsofuse.html">пользовательскому соглашению</a> и <a href="politic.html">политике конфиденциальности данного сайта</a>
+        </label>
+      <input type="hidden" name="formname" value="Заказ шоу Повелители природы">
+      <button class="btn order-form__btn" type="submit">Заказать</button>
+    </form>
+  </div>
+  <div class="modal-content modal-content--thanks">
+    <button class="modal-content__btn-close btn-close" type="button" title="Закрыть">Закрыть</button>
+    <h2 class="modal-content__title">Спасибо!</h2>
+    <p class="modal-content__text">Ваше сообщение отправлено, наши менеджеры свяжутья с вами в ближайшее время</p>
+
+  </div>
+  <script type="text/javascript" charset="utf-8" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.fancybox').fancybox();
+    });
+  </script>
+  <script type="text/javascript" charset="utf-8" src="js/popupdescription.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/ajax.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/move-up.js"></script>
+</body>
+
+</html>
