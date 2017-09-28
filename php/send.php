@@ -16,7 +16,7 @@ $phone = urldecode($phone);
 $fio = trim($fio);
 $phone = trim($phone);
 
-$emailAddress="info@t-kartika.ru";
+$emailAddress="annapolyanina@mail.ru";
 
 $referer = $_SERVER['HTTP_REFERER'];
 echo $fio;
@@ -27,7 +27,7 @@ echo $referer;
 
 include "libmail.php"; //Класс для работы с мейлом через smtp SSL/TSL
 $m= new Mail("utf-8"); // начинаем
-$m->From( " Server Notification;pelfimov@yandex.ru" ); // от кого отправляется почта
+$m->From( " Server Notification;parusaltay@yandex.ru" ); // от кого отправляется почта
 $m->To( $emailAddress ); // кому адресованно
 $m->Subject("Новая заявка с сайта ");
 $m->Body(
@@ -37,7 +37,7 @@ Cсылка перехода  $referer
 Оставленный телефон $phone
 Наименование формы $formname");
 $m->Priority(3);// приоритет письма
-$m->smtp_on("ssl://smtp.yandex.ru","pelfimov","24m7#4be", 465);
+$m->smtp_on("ssl://smtp.yandex.ru","parusaltay","RD943SFsC7", 465);
 $m->Send();    // а теперь пошла отправка
 
 
