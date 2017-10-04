@@ -71,8 +71,11 @@
   margin-top: 40px;
 }
 
-.reviews__item a::after{
-  content: "";
+.reviews__autor-wrapper{
+  position: relative;
+}
+
+.reviews__img {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -81,24 +84,18 @@
   left: 0;
   top: 50%;
   transform: translate(0, -50%);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("../img/reviews/profile.svg");
-  background-size: 30px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.reviews__img img{
+  width: 50px;
 
 }
 
-.reviews__item{
-  &--vladimir a::after{
-    background-image: url("../img/reviews/vladimir.jpg");
-    background-size: 70px;
-  }
-  &--elena a::after{
-    background-image: url("../img/reviews/elena.jpg");
-    background-size: 50px;
-  }
-  }
+
 
 
 .reviews__btn {
